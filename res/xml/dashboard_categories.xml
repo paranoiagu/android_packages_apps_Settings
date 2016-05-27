@@ -186,6 +186,14 @@
                 android:icon="@drawable/ic_settings_multiuser"
                 />
 
+        <!-- My CM（PD） Settings -->
+        <dashboard-tile
+                android:id="@+id/pd_settings"
+                android:title="@string/pd_settings_title"
+                android:fragment="com.android.settingsp.pd.PdSettings"
+                android:icon="@drawable/ic_settings_pdsetting_tint"
+                />
+
     </dashboard-category>
 
     <!-- Personalization -->

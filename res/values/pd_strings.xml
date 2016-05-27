@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2016 ParanoiaGu CM
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="pd_settings_title">PD Settings</string>
+    <string name="pd_settings_title">PD Settings</string>
+
+    <!-- status bar -->
+    <string name="pd_statusbar_category">Status Bar</string>
+
+    <!-- Superuser indicator on status bar -->
+    <string name="su_indicator">Superuser indicator</string>
+    <string name="su_indicator_summary_on">Superuser indicator is visible when a session is active</string>
+    <string name="su_indicator_summary_off">Toggle to show superuser indicator when a session is active.Only For CM inbuilt Root</string>
+
+    <!-- Headphones icon switch -->
+  	<string name="show_headset_icon_title">Headset icon</string>
+  	<string name="show_headset_icon_summary">Shows icon when headsets are connected.</string>
+
+    <!-- 4G LTE switch -->
+    <string name="show_fourg_title">Show 4G instead of LTE</string>
+    <string name="show_fourg_summary">Replaces LTE statusbar indicator with 4G .</string>
+
+    <!-- 3G / HSPA switch -->
+    <string name="show_threeg_title">Show 3G instead of HSPA</string>
+    <string name="show_threeg_summary">Replaces H+ statusbar indicator with 3G .</string>
+
+</resources>
