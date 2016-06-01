@@ -37,4 +37,20 @@
     <string name="show_threeg_title">Show 3G instead of HSPA</string>
     <string name="show_threeg_summary">Replaces H+ statusbar indicator with 3G .</string>
 
+
+    <!-- Advanced Device Info -->
+    <string name="advanced_device_info_title">Advanced information</string>
+    <string name="advanced_device_info_summary">Information about CPU, GPU etc.</string>
+    <!-- CPU -->
+    <string name="cpu_processor">Processor</string>
+    <string name="cpu_processor_hardware">Hardware</string>
+    <string name="cpu_type">Processor type</string>
+    <string name="cpu_features">Processor features</string>
+    <!-- GPU -->
+    <string name="gpu_title" translatable="false">GPU / OpenGL</string>
+    <string name="gpu_vendor">GPU vendor</string>
+    <string name="gpu_renderer">GPU renderer</string>
+    <string name="gpu_gl_version">OpenGL version</string>
+    <string name="gpu_gl_extensions">OpenGL extensions</string>
+    <string name="gpu_shader_version">Shader version</string>
 </resources>

@@ -52,6 +52,12 @@
             android:summary="@string/show_threeg_summary"
             android:defaultValue="false" />
 
-        
+
+        <!-- Advanced Device Info -->
+        <PreferenceScreen android:key="advanced_device_info"
+                android:fragment="com.android.settings.pd.AdvancedDeviceInfoSettings"
+                android:title="@string/advanced_device_info_title"
+                android:summary="@string/advanced_device_info_summary">
+        </PreferenceScreen>
     </PreferenceCategory>
 </PreferenceScreen>
