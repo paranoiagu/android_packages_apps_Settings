@@ -64,6 +64,12 @@
             android:summary="@string/keyguard_torch_summary"
             android:defaultValue="false" />
 
+        <!-- Lockscreen Show Chinese Date -->
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="chinese_date_view"
+            android:title="@string/show_chinese_date"
+            android:summary="@string/show_chinese_date_summary"
+            android:defaultValue="true" />
     </PreferenceCategory>
 
     <PreferenceCategory

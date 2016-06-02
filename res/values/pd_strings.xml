@@ -51,6 +51,10 @@
     <string name="keyguard_torch_title">Lockscreen torch</string>
     <string name="keyguard_torch_summary">Longpress power button while screen is off to turn on flashlight</string>
 
+    <!-- Show Chinese Date -->
+    <string name="show_chinese_date">Show Lunar</string>
+    <string name="show_chinese_date_summary">Enable to show Lunar</string>
+
     <!-- Advanced Device Info -->
     <string name="advanced_device_info_title">Advanced information</string>
     <string name="advanced_device_info_summary">Information about CPU, GPU etc.</string>
