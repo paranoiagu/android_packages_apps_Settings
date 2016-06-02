@@ -20,8 +20,10 @@
     <string name="pd_settings_title">PD Settings</string>
     <string name="pd_settings_title">PD Settings</string>
 
-    <!-- status bar -->
+    <!-- pd setting category -->
     <string name="pd_statusbar_category">Status Bar</string>
+    <string name="pd_keyguard_category">Lockscreen</string>
+    <string name="pd_others_category">Others</string>
 
     <!-- Superuser indicator on status bar -->
     <string name="su_indicator">Superuser indicator</string>

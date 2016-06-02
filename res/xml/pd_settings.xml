@@ -52,19 +52,29 @@
             android:summary="@string/show_threeg_summary"
             android:defaultValue="false" />
 
-        <!-- Camera sound switch -->
-        <SwitchPreference
-            android:key="camera_sounds"
-            android:title="@string/camera_sounds_title"
-            android:summary="@string/camera_sounds_summary"
-            android:defaultValue="true" />
+    </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="keyguard"
+        android:title="@string/pd_keyguard_category" >
         <!-- Lockscreen Torch -->
         <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
             android:key="keyguard_toggle_torch"
             android:title="@string/keyguard_torch_title"
             android:summary="@string/keyguard_torch_summary"
             android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="others"
+        android:title="@string/pd_others_category" >
+        <!-- Camera sound switch -->
+        <SwitchPreference
+            android:key="camera_sounds"
+            android:title="@string/camera_sounds_title"
+            android:summary="@string/camera_sounds_summary"
+            android:defaultValue="true" />
 
         <!-- Advanced Device Info -->
         <PreferenceScreen android:key="advanced_device_info"
