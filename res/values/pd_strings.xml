@@ -45,6 +45,10 @@
     <string name="camera_sounds_summary">Enable system camera shutter sound</string>
     <string name="camera_sound_warning_dialog_text">Disabling the camera shutter sound is illegal in some areas! Please check the applicable law in your country</string>
 
+    <!-- Lockscreen Torch -->
+    <string name="keyguard_torch_title">Lockscreen torch</string>
+    <string name="keyguard_torch_summary">Longpress power button while screen is off to turn on flashlight</string>
+
     <!-- Advanced Device Info -->
     <string name="advanced_device_info_title">Advanced information</string>
     <string name="advanced_device_info_summary">Information about CPU, GPU etc.</string>

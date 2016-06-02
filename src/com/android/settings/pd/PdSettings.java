@@ -61,6 +61,10 @@ public class PdSettings extends SettingsPreferenceFragment  implements OnPrefere
     private SwitchPreference mCameraSounds;
     private static final int DLG_CAMERA_SOUND = 1;
 
+    //Lockscreen Torch
+    private static final String KEYGUARD_TOGGLE_TORCH = "keyguard_toggle_torch";
+    private SwitchPreference mKeyguardTorch;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
