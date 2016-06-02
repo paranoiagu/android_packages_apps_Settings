@@ -14,6 +14,9 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- common -->
+    <string name="attention">Attention</string>
+
     <string name="pd_settings_title">PD Settings</string>
     <string name="pd_settings_title">PD Settings</string>
 
@@ -37,6 +40,10 @@
     <string name="show_threeg_title">Show 3G instead of HSPA</string>
     <string name="show_threeg_summary">Replaces H+ statusbar indicator with 3G .</string>
 
+    <!-- Camera sound switch -->
+    <string name="camera_sounds_title">Camera shutter sound</string>
+    <string name="camera_sounds_summary">Enable system camera shutter sound</string>
+    <string name="camera_sound_warning_dialog_text">Disabling the camera shutter sound is illegal in some areas! Please check the applicable law in your country</string>
 
     <!-- Advanced Device Info -->
     <string name="advanced_device_info_title">Advanced information</string>

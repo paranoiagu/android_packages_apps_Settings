@@ -52,6 +52,12 @@
             android:summary="@string/show_threeg_summary"
             android:defaultValue="false" />
 
+        <!-- Camera sound switch -->
+        <SwitchPreference
+            android:key="camera_sounds"
+            android:title="@string/camera_sounds_title"
+            android:summary="@string/camera_sounds_summary"
+            android:defaultValue="true" />
 
         <!-- Advanced Device Info -->
         <PreferenceScreen android:key="advanced_device_info"
