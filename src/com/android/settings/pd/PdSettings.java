@@ -26,9 +26,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.res.Resources;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.SystemProperties;
+import android.net.TrafficStats;
+import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.SwitchPreference;
 import android.preference.PreferenceScreen;
@@ -55,6 +58,15 @@ public class PdSettings extends SettingsPreferenceFragment  implements OnPrefere
     private static final String SHOW_THREEG = "show_threeg";
     private SwitchPreference mShowFourG;
     private SwitchPreference mShowThreeG;
+
+    private static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
+    private static final String NETWORK_TRAFFIC_AUTOHIDE = "network_traffic_autohide";
+    private int mNetTrafficVal;
+    private int MASK_UP;
+    private int MASK_DOWN;
+
+    private ListPreference mNetTrafficState;
+    private SwitchPreference mNetTrafficAutohide;
 
     private static final String KEY_CAMERA_SOUNDS = "camera_sounds";
     private static final String PROP_CAMERA_SOUND = "persist.sys.camera-sound";
@@ -90,22 +102,85 @@ public class PdSettings extends SettingsPreferenceFragment  implements OnPrefere
                 Settings.System.SHOW_THREEG, 0) == 1));
         }
 
+        loadResources();
+        mNetTrafficState = (ListPreference) prefSet.findPreference(NETWORK_TRAFFIC_STATE);
+        mNetTrafficAutohide = (SwitchPreference) prefSet.findPreference(NETWORK_TRAFFIC_AUTOHIDE);
+
+        // TrafficStats will return UNSUPPORTED if the device does not support it.
+        if (TrafficStats.getTotalTxBytes() != TrafficStats.UNSUPPORTED &&
+                TrafficStats.getTotalRxBytes() != TrafficStats.UNSUPPORTED) {
+            mNetTrafficVal = Settings.System.getInt(resolver, Settings.System.NETWORK_TRAFFIC_STATE, 0);
+            int intIndex = mNetTrafficVal & (MASK_UP + MASK_DOWN);
+            intIndex = mNetTrafficState.findIndexOfValue(String.valueOf(intIndex));
+            if (intIndex <= 0) {
+                mNetTrafficAutohide.setEnabled(false);
+            }
+            mNetTrafficState.setValueIndex(intIndex >= 0 ? intIndex : 0);
+            mNetTrafficState.setSummary(mNetTrafficState.getEntry());
+            mNetTrafficState.setOnPreferenceChangeListener(this);
+        } else {
+            prefSet.removePreference(findPreference(NETWORK_TRAFFIC_STATE));
+            prefSet.removePreference(findPreference(NETWORK_TRAFFIC_AUTOHIDE));
+        }
+
         mCameraSounds = (SwitchPreference) findPreference(KEY_CAMERA_SOUNDS);
         mCameraSounds.setChecked(SystemProperties.getBoolean(PROP_CAMERA_SOUND, true));
         mCameraSounds.setOnPreferenceChangeListener(this);
+    }
+
+    private void loadResources() {
+        Resources resources = getActivity().getResources();
+        MASK_UP = resources.getInteger(R.integer.maskUp);
+        MASK_DOWN = resources.getInteger(R.integer.maskDown);
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final String key = preference.getKey();
         if (KEY_CAMERA_SOUNDS.equals(key)) {
-           if ((Boolean) newValue) {
-               SystemProperties.set(PROP_CAMERA_SOUND, "1");
-           } else {
-               showDialogInner(DLG_CAMERA_SOUND);
-           }
+            if ((Boolean) newValue) {
+                SystemProperties.set(PROP_CAMERA_SOUND, "1");
+            } else {
+                showDialogInner(DLG_CAMERA_SOUND);
+            }
+            return true;
+        } else if (NETWORK_TRAFFIC_STATE.equals(key)) {
+            int intState = Integer.valueOf((String)newValue);
+            mNetTrafficVal = setBit(mNetTrafficVal, MASK_UP, getBit(intState, MASK_UP));
+            mNetTrafficVal = setBit(mNetTrafficVal, MASK_DOWN, getBit(intState, MASK_DOWN));
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_STATE, mNetTrafficVal);
+            int index = mNetTrafficState.findIndexOfValue((String) newValue);
+            mNetTrafficState.setSummary(mNetTrafficState.getEntries()[index]);
+            updateNetworkTrafficState(index);
+            return true;
+        } else if (NETWORK_TRAFFIC_AUTOHIDE.equals(key)) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NETWORK_TRAFFIC_AUTOHIDE, value ? 1 : 0);
+            return true;
         }
-        return true;
+        return false;
+    }
+
+    private void updateNetworkTrafficState(int mIndex) {
+        if (mIndex <= 0) {
+            mNetTrafficAutohide.setEnabled(false);
+        } else {
+            mNetTrafficAutohide.setEnabled(true);
+        }
+    }
+
+    // intMask should only have the desired bit(s) set
+    private int setBit(int intNumber, int intMask, boolean blnState) {
+        if (blnState) {
+            return (intNumber | intMask);
+        }
+        return (intNumber & ~intMask);
+    }
+
+    private boolean getBit(int intNumber, int intMask) {
+        return (intNumber & intMask) == intMask;
     }
 
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
