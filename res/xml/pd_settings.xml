@@ -105,6 +105,13 @@
             android:summary="@string/camera_sounds_summary"
             android:defaultValue="true" />
 
+        <!-- Screenshot sound -->
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="screenshot_sound"
+            android:title="@string/screenshot_sound_title"
+            android:summary="@string/screenshot_sound_summary"
+            android:defaultValue="true" />
+
         <!-- Advanced Device Info -->
         <PreferenceScreen android:key="advanced_device_info"
                 android:fragment="com.android.settings.pd.AdvancedDeviceInfoSettings"
