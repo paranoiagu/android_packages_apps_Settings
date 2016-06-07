@@ -80,10 +80,20 @@
     <string name="cpu_type">处理器类型</string>
     <string name="cpu_features">处理器特性</string>
     <!-- GPU -->
-    <string name="gpu_title" translatable="false">GPU / OpenGL</string>
     <string name="gpu_vendor">GPU供应商</string>
     <string name="gpu_renderer">GPU渲染器</string>
     <string name="gpu_gl_version">OpenGL版本</string>
     <string name="gpu_gl_extensions">OpenGL扩展</string>
     <string name="gpu_shader_version">Shader版本</string>
+
+    <!-- force change app storages -->
+    <!-- Title of dialog to force change [CHAR LIMIT=25] -->
+    <string name="force_change">强制更改</string>
+    <!-- Title of dialog to force change storage [CHAR LIMIT=25] -->
+    <string name="force_change_storage">强制更改更改存储空间</string>
+    <string name="storage_wizard_move_confirm_force_info">\n\n警告：这个程序未说明可移动到采用内部存储。
+        你可以强制移动，但是需要清掉应用的数据，才能使用这个程序。</string>
+    <string name="storage_wizard_move_confirm_body_cm">移动 <xliff:g id="app" example="Calculator">^1</xliff:g> 和应用的数据到 <xliff:g id="name" example="SD card">^2</xliff:g> 需要花一点点时间。移动完成后，你就可以使用此应用了。
+\n\n在移动过程中，请不要移除 <xliff:g id="name" example="SD card">^2</xliff:g> 。<xliff:g id="forcetext">^3</xliff:g>
+    </string>
 </resources>
