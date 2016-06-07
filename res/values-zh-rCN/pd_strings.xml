@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2016 ParanoiaGu CM
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- common -->
+    <string name="attention">注意</string>
+
+    <string name="pd_settings_title">PD 设置</string>
+
+    <!-- pd setting category -->
+    <string name="pd_statusbar_category">状态栏</string>
+    <string name="pd_keyguard_category">锁屏</string>
+    <string name="pd_others_category">其它</string>
+
+    <!-- Superuser indicator on status bar -->
+    <string name="su_indicator">超级用户指示器</string>
+    <string name="su_indicator_summary_on">当一个会话是活动时超级用户指示器为可见</string>
+    <string name="su_indicator_summary_off">点击更改为当一个会话为活动状态时，显示超级用户指示器</string>
+
+    <!-- Headphones icon switch -->
+  	<string name="show_headset_icon_title">耳机图标</string>
+  	<string name="show_headset_icon_summary">当耳机连接上时显示耳机图标.</string>
+
+    <!-- 4G LTE switch -->
+    <string name="show_fourg_title">显示4G，而不是LTE</string>
+    <string name="show_fourg_summary">替换状态栏指示器中LTE为4G</string>
+
+    <!-- 3G / HSPA switch -->
+    <string name="show_threeg_title">显示3G以替换HSPA</string>
+    <string name="show_threeg_summary">替换H+状态栏指示器为3G. 重启生效</string>
+
+    <!-- Network traffic -->
+    <string name="show_network_traffic_state">状态栏显示当前网速</string>
+    <string name="network_traffic_autohide">自动隐藏</string>
+    <string name="network_traffic_autohide_summary">当无网络活动时，隐藏网络传输监视器。</string>
+    <string name="show_network_traffic_disable">禁用</string>
+    <string name="show_network_traffic_up">上传</string>
+    <string name="show_network_traffic_down">下载</string>
+    <string name="show_network_traffic_all">上传和下载</string>
+
+    <!-- Camera sound switch -->
+    <string name="camera_sounds_title">照相机快门声</string>
+    <string name="camera_sounds_summary">启用照相机快门声</string>
+    <string name="camera_sound_warning_dialog_text">禁用相机快门声在某些地区是违法的！请查看你国家相关的法律</string>
+
+    <!-- Screenshot sound -->
+    <string name="screenshot_sound_title">截图声音</string>
+    <string name="screenshot_sound_summary">截图时播放音效</string>
+
+    <!-- Hide power menu on lockscreen -->
+    <string name="powermenu_lockscreen_title">锁屏电源菜单</string>
+    <string name="powermenu_lockscreen_summary">电源菜单显示在锁定屏幕上</string>
+
+    <!-- Lockscreen Torch -->
+    <string name="keyguard_torch_title">锁屏手电筒</string>
+    <string name="keyguard_torch_summary">熄屏时长按电源键打开手电筒</string>
+
+    <!-- Show Chinese Date -->
+    <string name="show_chinese_date">显示农历</string>
+    <string name="show_chinese_date_summary">启用农历显示</string>
+
+    <!-- Advanced Device Info -->
+    <string name="advanced_device_info_title">高级信息</string>
+    <string name="advanced_device_info_summary">CPU、GPU等</string>
+    <!-- CPU -->
+    <string name="cpu_processor">处理器</string>
+    <string name="cpu_processor_hardware">硬件</string>
+    <string name="cpu_type">处理器类型</string>
+    <string name="cpu_features">处理器特性</string>
+    <!-- GPU -->
+    <string name="gpu_title" translatable="false">GPU / OpenGL</string>
+    <string name="gpu_vendor">GPU供应商</string>
+    <string name="gpu_renderer">GPU渲染器</string>
+    <string name="gpu_gl_version">OpenGL版本</string>
+    <string name="gpu_gl_extensions">OpenGL扩展</string>
+    <string name="gpu_shader_version">Shader版本</string>
+</resources>
