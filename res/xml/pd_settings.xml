@@ -67,6 +67,12 @@
             android:dependency="network_traffic_state"
             android:defaultValue="false" />
 
+        <!-- Status Bar Weather -->
+        <PreferenceScreen
+            android:key="statusbar_weather"
+            android:fragment="com.android.settings.pd.StatusBarWeather"
+            android:title="@string/status_bar_temperature_title" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

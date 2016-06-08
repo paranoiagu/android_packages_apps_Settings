@@ -30,8 +30,8 @@
     <string name="su_indicator_summary_off">点击更改为当一个会话为活动状态时，显示超级用户指示器</string>
 
     <!-- Headphones icon switch -->
-  	<string name="show_headset_icon_title">耳机图标</string>
-  	<string name="show_headset_icon_summary">当耳机连接上时显示耳机图标.</string>
+      <string name="show_headset_icon_title">耳机图标</string>
+      <string name="show_headset_icon_summary">当耳机连接上时显示耳机图标.</string>
 
     <!-- 4G LTE switch -->
     <string name="show_fourg_title">显示4G，而不是LTE</string>
@@ -49,6 +49,44 @@
     <string name="show_network_traffic_up">上传</string>
     <string name="show_network_traffic_down">下载</string>
     <string name="show_network_traffic_all">上传和下载</string>
+
+    <!-- Status bar temperature -->
+    <string name="status_bar_temperature_title">温度</string>
+    <string name="status_bar_temperature_hidden">隐藏</string>
+    <string name="status_bar_temperature_show_scale">以标准单位显示</string>
+    <string name="status_bar_temperature_hide_scale">不以标准单位显示</string>
+    <string name="status_bar_temperature_location_title">显示位置</string>
+    <string name="status_bar_temperature_location_summary">选择在状态栏何处显示天气温度</string>
+    <string name="status_bar_temperature_location_right">右侧显示</string>
+    <string name="status_bar_temperature_location_left">左侧显示</string>
+    <string name="status_bar_weather_color_title">温度颜色</string>
+    <string name="status_bar_weather_size_title">字体大小</string>
+    <string name="status_bar_weather_font_style_title">字体</string>
+    <string name="status_bar_weather_font_normal">标准</string>
+    <string name="status_bar_weather_font_italic">斜体</string>
+    <string name="status_bar_weather_font_bold">加粗</string>
+    <string name="status_bar_weather_font_bold_italic">粗斜体</string>
+    <string name="status_bar_weather_font_light">细体</string>
+    <string name="status_bar_weather_font_light_italic">细斜体</string>
+    <string name="status_bar_weather_font_thin">瘦体</string>
+    <string name="status_bar_weather_font_thin_italic">瘦斜体</string>
+    <string name="status_bar_weather_font_condensed">简单体</string>
+    <string name="status_bar_weather_font_condensed_italic">简斜体</string>
+    <string name="status_bar_weather_font_condensed_light">简细体</string>
+    <string name="status_bar_weather_font_condensed_light_italic">简细斜体</string>    
+    <string name="status_bar_weather_font_condensed_bold">简粗体</string>
+    <string name="status_bar_weather_font_condensed_bold_italic">简斜粗体</string>
+    <string name="status_bar_weather_font_medium">中等</string>
+    <string name="status_bar_weather_font_medium_italic">中等斜体</string>
+    <string name="status_bar_weather_font_black">黑体</string>
+    <string name="status_bar_weather_font_black_italic">黑斜体</string>    
+    <string name="status_bar_weather_font_dancingscript">DancingScript</string>
+    <string name="status_bar_weather_font_dancingscript_bold">DancingScript Bold</string>
+    <string name="status_bar_weather_font_comingsoon">ComingSoon</string>
+    <string name="status_bar_weather_font_notoserif">NotoSerif Normal</string>
+    <string name="status_bar_weather_font_notoserif_italic">NotoSerif Italic</string>
+    <string name="status_bar_weather_font_notoserif_bold">NotoSerif Bold</string>
+    <string name="status_bar_weather_font_notoserif_bold_italic">NotoSerif Bold Italic</string>    
 
     <!-- Camera sound switch -->
     <string name="camera_sounds_title">照相机快门声</string>
