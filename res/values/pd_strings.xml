@@ -109,6 +109,17 @@
     <string name="show_chinese_date">Show Lunar</string>
     <string name="show_chinese_date_summary">Enable to show Lunar</string>
 
+    <!-- Lockscreen Weather Show -->
+    <string name="weather_show_weather_title">Show weather</string>
+    <string name="weather_show_weather_summary">Enable to show weather information</string>
+    <!-- Weather icon sets -->
+    <string name="weather_icon_set_title">Icon set</string>
+    <string name="weather_icons_standard">Colored</string>
+    <string name="weather_icons_monochrome">Monochrome</string>
+    <string name="weather_icons_vclouds" translatable="false">VClouds</string>
+    <string name="icon_set_selection_get_more">Get more\u2026</string>
+    <string name="icon_set_store_filter" translatable="false">Chronus Weather Icons</string>
+
     <!-- Advanced Device Info -->
     <string name="advanced_device_info_title">Advanced information</string>
     <string name="advanced_device_info_summary">Information about CPU, GPU etc.</string>

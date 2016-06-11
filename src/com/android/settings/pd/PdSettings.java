@@ -43,6 +43,7 @@ import com.android.internal.util.pd.PDUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.pd.IconSelectionPreference;
 import android.preference.Preference.OnPreferenceChangeListener;
 
 import java.util.List;
@@ -76,6 +77,9 @@ public class PdSettings extends SettingsPreferenceFragment  implements OnPrefere
     //Lockscreen Torch
     private static final String KEYGUARD_TOGGLE_TORCH = "keyguard_toggle_torch";
     private SwitchPreference mKeyguardTorch;
+
+    private static final String LOCK_SCREEN_WEATHER_CONDITION_ICON = "lock_screen_weather_condition_icon";
+    private IconSelectionPreference mIconSet;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -123,6 +127,8 @@ public class PdSettings extends SettingsPreferenceFragment  implements OnPrefere
             prefSet.removePreference(findPreference(NETWORK_TRAFFIC_AUTOHIDE));
         }
 
+        mIconSet = (IconSelectionPreference) findPreference(LOCK_SCREEN_WEATHER_CONDITION_ICON);
+
         mCameraSounds = (SwitchPreference) findPreference(KEY_CAMERA_SOUNDS);
         mCameraSounds.setChecked(SystemProperties.getBoolean(PROP_CAMERA_SOUND, true));
         mCameraSounds.setOnPreferenceChangeListener(this);
@@ -159,8 +165,16 @@ public class PdSettings extends SettingsPreferenceFragment  implements OnPrefere
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.NETWORK_TRAFFIC_AUTOHIDE, value ? 1 : 0);
             return true;
+        } else if (LOCK_SCREEN_WEATHER_CONDITION_ICON.equals(key)) {
+            updateIconSetSummary();
         }
         return false;
+    }
+
+    private void updateIconSetSummary() {
+        if (mIconSet != null) {
+            mIconSet.setSummary(mIconSet.getEntry());
+        }
     }
 
     private void updateNetworkTrafficState(int mIndex) {
