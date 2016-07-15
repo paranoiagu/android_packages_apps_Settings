@@ -97,6 +97,16 @@
     <string name="screenshot_sound_title">Screenshot sound</string>
     <string name="screenshot_sound_summary">Plays sound effect when screenshot is taken</string>
 
+    <!-- ScreenRecord Shortcut -->
+    <string name="screen_record_shortcut">Screenrecord Shortcut</string>
+    <string name="screen_record_shortcut_on">Volume Up + Power triggers Screenrecord</string>
+    <string name="screen_record_shortcut_off">Volume Up + Power does nothing</string>
+
+    <!-- ScreenShot Shortcut -->
+    <string name="screen_shot_shortcut">Screenshot Shortcut</string>
+    <string name="screen_shot_shortcut_on">Volume Down + Power triggers screenshot</string>
+    <string name="screen_shot_shortcut_off">Volume Down + Power does nothing</string>
+
     <!-- Hide power menu on lockscreen -->
     <string name="powermenu_lockscreen_title">Power menu on lock screen</string>
     <string name="powermenu_lockscreen_summary">Show power menu on the lock screen</string>

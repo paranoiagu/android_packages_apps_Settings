@@ -118,6 +118,22 @@
             android:summary="@string/screenshot_sound_summary"
             android:defaultValue="true" />
 
+        <!-- ScreenShot Shortcut -->
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="screen_shot_shortcut"
+            android:title="@string/screen_shot_shortcut"
+            android:summaryOn="@string/screen_shot_shortcut_on"
+            android:summaryOff="@string/screen_shot_shortcut_off"
+            android:defaultValue="true" />
+
+        <!-- ScreenRecord Shortcut -->
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
+            android:key="screen_record_shortcut"
+            android:title="@string/screen_record_shortcut"
+            android:summaryOn="@string/screen_record_shortcut_on"
+            android:summaryOff="@string/screen_record_shortcut_off"
+            android:defaultValue="true" />
+
         <!-- Advanced Device Info -->
         <PreferenceScreen android:key="advanced_device_info"
                 android:fragment="com.android.settings.pd.AdvancedDeviceInfoSettings"

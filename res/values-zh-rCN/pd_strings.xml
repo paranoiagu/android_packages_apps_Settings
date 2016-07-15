@@ -97,6 +97,16 @@
     <string name="screenshot_sound_title">截图声音</string>
     <string name="screenshot_sound_summary">截图时播放音效</string>
 
+    <!-- ScreenRecord Shortcut -->
+    <string name="screen_record_shortcut">屏幕录制快捷方式</string>
+    <string name="screen_record_shortcut_on">长按 音量加+电源键 录制屏幕</string>
+    <string name="screen_record_shortcut_off">无</string>
+
+    <!-- ScreenShot Shortcut -->
+    <string name="screen_shot_shortcut">屏幕截图快捷方式</string>
+    <string name="screen_shot_shortcut_on">长按 音量减+电源键 截图</string>
+    <string name="screen_shot_shortcut_off">无</string>
+
     <!-- Hide power menu on lockscreen -->
     <string name="powermenu_lockscreen_title">锁屏电源菜单</string>
     <string name="powermenu_lockscreen_summary">电源菜单显示在锁定屏幕上</string>
